@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>bottom</title>
+		<style>
+			*{
+				margin: 0 auto;
+				font-size: 15px;
+				width:150px;
+				text-align: left;
+		
+			 }
+			div{
+				border:5px dotted;
+				width: 155px;
+				border-radius: 160px;
+				padding: 40px;
+				margin-top: 60px;
+			  
+			}
+			 
+            {
+	            0%   {border: 5px dashed yellow;}
+	            25%  {border: 5px dotted blue; }
+              	50%  {border: 5px dashed green;}
+	            75%  {border: 5px dashed red; }
+            }
+            a{
+            	color: white;
+            	text-decoration: none;
+            }
+            p{
+            	color:yellow;
+            }
+            button{
+            	background-color: black;
+            	color:white;
+            	border: 2px solid yellow;
+            	border-radius: 5px;
+            	margin-left: 42px;
+            	margin-top: 10px;
+            }
+		</style>
+		<script>
+		function Anesthesia(){
+			x=document.getElementById("Vexento");
+			y=document.createElement("a");
+			z=document.createTextNode("这是新加的a元素 ")
+			y.appendChild(z);
+			x.appendChild(y);
+			y.style.backgroundColor="indianred";
+			y.style.color="yellow";
+			y.setAttribute("href","#");
+		}
+		function LonelyDance(){
+			x=document.getElementById("Vexento");
+			z=document.getElementsByTagName("a").length
+			y=document.getElementsByTagName("a");
+			for(i=z-1;i>=0;i--)
+			{
+				x.removeChild(y[i]);
+			}
+		}
+		function Homexu(){
+			x=document.getElementById("Vexento");
+			z=document.getElementsByTagName("p").length
+			y=document.getElementsByTagName("p");
+			for(i=z-1;i>=0;i--)
+			{
+				x.removeChild(y[i]);
+			}
+		}
+		function aHong(){
+			x=document.getElementsByTagName("div");
+			z=x[0].children;
+			for(i=0;i<z.length;i++)
+			{
+				z[i].style.backgroundColor="red";
+			}
+		}
+	    </script>
+	</head>
+	<button onclick="Anesthesia()">添加一个a元素</button>
+	<button onclick="LonelyDance()">删除所有a元素</button>
+	<button onclick="Homexu()">删除所有p元素</button>
+	<button onclick="aHong()">设置红色背景</button>
+	<body style="background-color: black;">
+	<div id="Vexento">
+	<a href="#">这是第一个a元素</a>
+	<p>这是第一个p元素</p>
+	<a href="#">这是第二个a元素</a>
+	<p>这是第二个p元素</p>
+	</div>
+	
+	</body>
+</html>
